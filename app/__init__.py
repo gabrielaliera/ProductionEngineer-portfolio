@@ -6,6 +6,7 @@ load_dotenv()
 app = Flask(__name__)
 
 #/work / experience / education / places we visited
+# updated flask routes
 
 @app.route('/')
 def index():
