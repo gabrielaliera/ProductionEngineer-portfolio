@@ -3,12 +3,19 @@ p, h1, h2, h3, h4, h5, h6, button {
 }
 
 body {
-    background-color: #f5f5f9;
+    background-color: #1d539f !important;
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
+}
+
+p {
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    text-align: left;
 }
 
 .nav-bar {
@@ -72,8 +79,9 @@ body {
 .profile {
     background-color: #1d539f !important;
     text-align: center;
-    height: 320px;
-    margin-bottom: 50px;
+    height: 660px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .profile h1 {
@@ -92,9 +100,22 @@ body {
         padding: 20px;
 }
 
-.profile .profile-picture {
-    margin-bottom: 30px;
-    height: 200px;
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 30px 5px 10px;
+    flex-basis: 30%; /* Adjust the width of the profile picture column */
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.about-me {
+    padding: 20px 15px 20px 15px;
+    margin: 10px 3px 3px 10px;
+    flex-basis: 60%;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
 }
 
 .banner {
@@ -114,4 +135,39 @@ body {
     color: white;
     font-size: 50px;
     font-weight: 700;
+}
+
+
+.education {
+    margin: 10px 0px 10px 0px;
+    padding: 20px 0px 50px 0px;
+
+}
+.education h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.education h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+}
+.education p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+.container {
+  width: auto;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+  font-size: 24px;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  background-color:#f8b92a;
+  margin: 20px 200px 20px 200px;
+  padding: 20px;
+  padding-bottom: 40px;
 }
