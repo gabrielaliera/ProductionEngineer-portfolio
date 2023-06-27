@@ -90,10 +90,10 @@ p {
         color: white;
 }
 
-.profile img {
+.profile-picture img {
         border-radius: 50%;
         max-width: 100%;
-        max-height: 100%;
+        max-height: 65%;
         margin-left: auto;
         margin-right: auto;
         display: block;        
@@ -189,7 +189,7 @@ p {
 }
 
 .education {
-    margin: 10px 0px 10px 0px;
+    margin: 20px 0px 10px 0px;
     padding: 20px 0px 50px 0px;
 
 }
@@ -209,18 +209,18 @@ p {
     font-weight: 400;
 }
 
-
-.container {
-  width: auto;
-  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
-  font-size: 24px;
-  border-radius: 24px;
-  backdrop-filter: blur(10px);
-  background-color:#f8b92a;
-  margin: 20px 200px 20px 200px;
-  padding: 20px;
-  padding-bottom: 40px;
+.eduContainer {
+    width: auto;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+    font-size: 24px;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    background-color:#f8b92a;
+    margin: 20px 200px 20px 200px;
+    padding: 20px;
+    padding-bottom: 40px;
 }
+
 
 .Mapcontainer {
     width: 90%;
