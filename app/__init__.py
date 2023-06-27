@@ -16,9 +16,28 @@ def index():
 def Work():
     return render_template('Work.html', title="Work", url=os.getenv("URL"))
 
+# Hobbies data
+hobbyData = [
+    {"imgSource": "/static/img/logo.jpg",
+    "name": "True Crime Podcasts", 
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+    {"imgSource": "/static/img/logo.jpg", 
+    "name": "Soccer", 
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+    {"imgSource": "/static/img/logo.jpg", 
+    "name": "Traveling", 
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+    {"imgSource": "/static/img/logo.jpg", 
+    "name": "Gardening", 
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+]
+
 @app.route('/Hobbies')  # Define the route for /Hobbies
 def Hobbies():
-    return render_template('Hobbies.html', title="Hobbies", url=os.getenv("URL"))
+    context ={
+        "hobbyData": hobbyData
+    }
+    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), **context)
 
 @app.route('/Locations')  # Define the route for /Map
 def Map():
