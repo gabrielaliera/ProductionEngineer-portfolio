@@ -3,12 +3,19 @@ p, h1, h2, h3, h4, h5, h6, button {
 }
 
 body {
-    background-color: #f5f5f9;
+    background-color: #1d539f !important;
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
+}
+
+p {
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    text-align: left;
 }
 
 .nav-bar {
@@ -47,7 +54,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #61CCD6;
+    color: #f8b92a;
 }
 
 .nav-logo {
@@ -72,8 +79,9 @@ body {
 .profile {
     background-color: #1d539f !important;
     text-align: center;
-    height: 320px;
-    margin-bottom: 50px;
+    height: 660px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .profile h1 {
@@ -82,19 +90,32 @@ body {
         color: white;
 }
 
-.profile img {
+.profile-picture img {
         border-radius: 50%;
         max-width: 100%;
-        max-height: 100%;
+        max-height: 65%;
         margin-left: auto;
         margin-right: auto;
         display: block;        
         padding: 20px;
 }
 
-.profile .profile-picture {
-    margin-bottom: 30px;
-    height: 200px;
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 30px 5px 10px;
+    flex-basis: 30%; /* Adjust the width of the profile picture column */
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.about-me {
+    padding: 20px 15px 20px 15px;
+    margin: 10px 3px 3px 10px;
+    flex-basis: 60%;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
 }
 
 .banner {
@@ -114,4 +135,112 @@ body {
     color: white;
     font-size: 50px;
     font-weight: 700;
+}
+
+.hobbies {
+    background-color: #1d539f !important;
+    text-align: center;
+   
+    height: auto;
+}
+.hobbies h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-left:10px;
+}
+.container {
+    width: auto;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+    font-size: 24px;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    background-color:#f8b92a;
+    margin: 20px 200px 20px 200px;
+    padding: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container img {
+    width: 200px;
+    flex-basis:20%
+}
+
+.container .hobbyInfo {
+    flex-basis: 80%;
+}
+
+.hobbyInfo h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+    margin-left:10px;
+}
+.hobbyInfo p{
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+    text-align: left;
+    margin-left:10px;
+}
+
+.education {
+    margin: 20px 0px 10px 0px;
+    padding: 20px 0px 50px 0px;
+
+}
+.education h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.education h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+}
+.education p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.eduContainer {
+    width: auto;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+    font-size: 24px;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    background-color:#f8b92a;
+    margin: 20px 200px 20px 200px;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+
+.Mapcontainer {
+    width: 90%;
+    height: 550px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+    font-size: 24px;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    background-color:#f8b92a;
+    padding: 20px;
+    margin-left: 4%;
+    margin-bottom: 4%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  
+#map {
+    width: 100%;
+    height: 550px;
+    margin: 0;
+    padding: 0;
+    border-radius: 24px;
 }
