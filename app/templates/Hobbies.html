@@ -18,15 +18,33 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    <main>
-        <h1>{{title}}</h1>  
-        {% for hobby in hobbyData %}
-        <div class="container">
-          <img src={{hobby.imgSource}} alt={{hobby.name}}>
-          <div>{{hobby.name}}</div>
-          <div>{{hobby.description}}</div>
+      <header class="nav-bar">
+        <div class="nav-content">
+                <a href="/"> 
+                    <div class="nav-logo">
+                    <img src="./static/img/logo.svg" />
+                    </div>
+                </a>
+        <div class = "nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('Hobbies') }}">Hobbies</a>
+            <a href="{{ url_for('Map') }}">Map</a>
+        </div>    
         </div>
-        {% endfor %}
-    </main>
+    </header>
+       <div class="hobbies">
+          <h1>{{title}}</h1>  
+          {% for hobby in hobbyData %}
+          <div class="container">
+            <div>
+              <img src={{hobby.imgSource}} alt={{hobby.name}}>
+            </div>
+            <div class="hobbyInfo">
+              <h1>{{hobby.name}}</h1>
+              <p>{{hobby.description}}</p>
+            </div>   
+          </div>
+          {% endfor %}
+       </div>
   </body>
 </html>
