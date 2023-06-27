@@ -137,6 +137,56 @@ p {
     font-weight: 700;
 }
 
+.hobbies {
+    background-color: #1d539f !important;
+    text-align: center;
+   
+    height: auto;
+}
+.hobbies h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-left:10px;
+}
+.container {
+    width: auto;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+    font-size: 24px;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    background-color:#f8b92a;
+    margin: 20px 200px 20px 200px;
+    padding: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container img {
+    width: 200px;
+    flex-basis:20%
+}
+
+.container .hobbyInfo {
+    flex-basis: 80%;
+}
+
+.hobbyInfo h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+    margin-left:10px;
+}
+.hobbyInfo p{
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+    text-align: left;
+    margin-left:10px;
+=======
 
 .education {
     margin: 10px 0px 10px 0px;
