@@ -27,22 +27,22 @@
                 </a>
         <div class = "nav-links">
             <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{url for('Experience')}}">Experience</a>
+            <a href="{{ url_for('Work') }}">Experience</a>
             <a href="{{ url_for('Hobbies') }}">Hobbies</a>
             <a href="{{ url_for('Map') }}">Map</a>
         </div>    
         </div>
     </header>
-       <div class="experiences">
+       <div class="work">
           <h1>{{title}}</h1>  
-          {% for job in experienceData %}
+          {% for job in workData %}
           <div class="container">
-            <div>
-              <img src={{job.imgSource}} alt={{job.name}}>
-            </div>
             <div class="jobInfo">
-              <h1>{{job.name}}</h1>
+              <h2>{{job.title}}<br/>{{ job.employer}}</h2>
               <p>{{job.description}}</p>
+            </div>
+            <div class="jobDate">
+              <p>{{job.date}}</p>
             </div>   
           </div>
           {% endfor %}
