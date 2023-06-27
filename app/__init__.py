@@ -18,16 +18,16 @@ def Work():
 
 # Hobbies data
 hobbyData = [
-    {"imgSource": "/static/img/logo.jpg",
+    {"imgSource": "/static/img/podcast.jpg",
     "name": "True Crime Podcasts", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-    {"imgSource": "/static/img/logo.jpg", 
+    {"imgSource": "/static/img/soccer.jpg", 
     "name": "Soccer", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-    {"imgSource": "/static/img/logo.jpg", 
+    {"imgSource": "/static/img/travel.jpg", 
     "name": "Traveling", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-    {"imgSource": "/static/img/logo.jpg", 
+    {"imgSource": "/static/img/garden.jpg", 
     "name": "Gardening", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
 ]
