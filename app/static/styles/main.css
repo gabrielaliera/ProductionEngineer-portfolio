@@ -173,7 +173,7 @@ p {
     flex-basis: 80%;
 }
 
-.hobbyInfo h1{
+.hobbyInfo h1 {
     font-size: 40px;
     font-weight: 700;
     color: black;
@@ -221,6 +221,42 @@ p {
     padding-bottom: 40px;
 }
 
+.work h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-left:10px;
+}
+.jobInfo {
+    flex-basis: 70%;
+    text-align: left;
+    color: black;
+}
+
+.jobInfo h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+    margin-left:10px;
+}
+.jobInfo p {
+    color: black;
+    font-weight: 300;
+    margin-left:10px;
+}
+
+.jobDate {
+    flex-basis: 30%;
+    text-align: right;
+}
+.jobDate p {
+    color: black;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: right;
+}
 
 .Mapcontainer {
     width: 90%;
