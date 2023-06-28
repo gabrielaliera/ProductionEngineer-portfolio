@@ -12,9 +12,39 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
 
+workData = [
+    {
+        "title": "Production Engineering Intern",
+        "employer": "MHL Fellowship",
+        "date": "June 2023 - Present",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {   
+        "title": "Software Engineering Intern",
+        "employer": "Meta",
+        "date": "June 2022 - September 2022", 
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {   
+        "title": "Participant",
+        "employer": "MHL Hackaton",
+        "date": "June 2022",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "title": "President",
+        "employer": "The Club",
+        "date": "Oct 2021 - May 2022", 
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]
+
 @app.route('/Work')  # Define the route for /Work
 def Work():
-    return render_template('Work.html', title="Work", url=os.getenv("URL"))
+    context ={
+        "workData": workData
+    }
+    return render_template('Work.html', title="Work", url=os.getenv("URL"), **context)
 
 # Hobbies data
 hobbyData = [
@@ -34,7 +64,7 @@ hobbyData = [
 
 @app.route('/Hobbies')  # Define the route for /Hobbies
 def Hobbies():
-    context ={
+    context = {
         "hobbyData": hobbyData
     }
     return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), **context)
