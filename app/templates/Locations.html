@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+    <meta property="og:url" content="{{ url }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <div class="nav-content">
+                <a href="/"> 
+                    <div class="nav-logo">
+                    <img src="./static/img/logo.svg" />
+                    </div>
+                </a>
+        <div class = "nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('Work') }}">Experience</a>
+            <a href="{{ url_for('Hobbies') }}">Hobbies</a>
+            <a href="{{ url_for('Map') }}">Map</a>
+        </div>    
+        </div>
+    </header>
+        <div class="hobbies">
+        <h1>Cool Places I've Visted!</h1>
+        </div>
+        <div class="Mapcontainer">
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    mapTypeId: "terrain", // choose from roadmap, satellite, hybrid, terrain
+                    zoomControl: false,
+                    zoom: 3,
+                    center: {lat: 40.7128, lng: -74.0060},
+                    disableDefaultUI: true, 
+                    draggable: true, 
+                    styles: [
+                    {
+                            featureType: "administrative.country",
+                            elementType: "labels.text.fill",
+                            stylers: [
+                                { visibility: "on" },
+                                { color: "#F8B92A" },
+                                { weight: 13 },
+                                { gamma: 0.8 },
+                                { saturation: 50 },
+                                { lightness: 0 },
+                                { invert_lightness: false },
+                            ],
+                        },
+                    {
+                        featureType: "administrative.locality",
+                        elementType: "labels.text.fill",
+                        stylers: [
+                            { visibility: "on" },
+                            { color: "#F8B92A" },
+                            { weight: 13 },
+                            { gamma: 0.8 },
+                            { saturation: 50 },
+                            { lightness: 0 },
+                            { invert_lightness: false },
+                        ],
+                    },
+                    {
+                            featureType: "administrative.land_parcel",
+                            elementType: "labels.text.fill",
+                            stylers: [
+                                { visibility: "on" },
+                                { color: "#F8B92A" },
+                                { weight: 13 },
+                                { gamma: 0.8 },
+                                { saturation: 50 },
+                                { lightness: 0 },
+                                { invert_lightness: false },
+                            ],
+                        },
+                        {
+                            featureType: "administrative.province",
+                            elementType: "labels.text.fill",
+                            stylers: [
+                                { visibility: "on" },
+                                { color: "#F8B92A" },
+                                { weight: 13 },
+                                { gamma: 0.8 },
+                                { saturation: 50 },
+                                { lightness: 0 },
+                                { invert_lightness: false },
+                            ],
+                        },
+                        {
+                            featureType: "water",
+                            elementType: "labels.text.fill",
+                            stylers: [
+                                { visibility: "on" },
+                                { color: "#F8B92A" },
+                            ],
+                        },
+                    {
+                        featureType: "all",
+                        elementType: "geometry",
+                        stylers: [
+                            { hue: "#1D539F" },
+                            { saturation: -20 },
+                            { lightness: 0 },
+                            { visibility: "on" },
+                        ],
+                    },
+                    {
+                        featureType: "road",
+                        elementType: "geometry",
+                        stylers: [{ visibility: "off" }],
+                    },
+                    {
+                        featureType: "poi.business",
+                        elementType: "labels.icon",
+                        stylers: [{ visibility: "off" }],
+                    },
+                    {
+                        featureType: "transit",
+                        elementType: "geometry",
+                        stylers: [{ visibility: "off" }],
+                    },
+                ],
+                });
+    
+                var marker1 = new google.maps.Marker({
+                    position: {lat: 51.5, lng: -0.09},
+                    map: map,
+                    title: 'United Kingdom',
+                    icon: {
+                        url: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+                    }
+                });
+    
+                var marker2 = new google.maps.Marker({
+                    position: { lat: 18.7357, lng: -70.1627 }, 
+                    map: map,
+                    title: 'Dominican Republic',
+                    icon: {
+                        url: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+                    }
+                });
+
+                var marker3 = new google.maps.Marker({
+                    position: { lat: 45.50, lng: -73.5673 }, 
+                    map: map,
+                    title: 'Montreal Candada',
+                    icon: {
+                        url: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+                    }
+                });
+
+                var marker4 = new google.maps.Marker({
+                    position: { lat: 28.5383, lng: -81.3792 }, 
+                    map: map,
+                    title: 'Orlando Florida',
+                    icon: {
+                        url: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+                    }
+                });
+
+                var marker5 = new google.maps.Marker({
+                    position: { lat: 41.9028, lng: 12.4964 }, 
+                    map: map,
+                    title: 'Italy',
+                    icon: {
+                        url: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+                    }
+                });
+
+                var marker6 = new google.maps.Marker({
+                    position: { lat: 40.4168, lng: -3.7038 }, 
+                    map: map,
+                    title: 'Spain',
+                    icon: {
+                        url: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+                    }
+                });
+    
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX07PPaDIwuqoyAsKH_94n6CQLlpiyDtQ&callback=initMap" async defer></script>
+    </div>
+</body>
+</html>
