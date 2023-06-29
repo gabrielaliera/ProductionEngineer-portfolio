@@ -67,7 +67,7 @@ def Hobbies():
     context = {
         "hobbyData": hobbyData
     }
-    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), **context)
+    return render_template('Hobbies.html', title="Hobbies", url=os.getenv("URL"), **context)
 
 @app.route('/Locations')  # Define the route for /Map
 def Map():
