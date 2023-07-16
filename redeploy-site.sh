@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-# Kill existing tmux sessions
-tmux kill-server
+#No longer using, updated with adding to systemctl
+#Kill existing tmux sessions #tmux kill-server
 
 # Navigate to project folder
 cd ProductionEngineer-portfolio
@@ -13,6 +13,6 @@ git fetch && git reset origin/main --hard
 source python3-virutalenv/bin/activate
 pip install -r requirements.txt
 
+#No longer using, updated with adding to systemctl
 # Start Flask server in a new detached tmux session
-# tmux new-session -d -s flask-session 'cd ProductionEngineer-portfolio && source python3-virutalenv/bin/activate && flask run --host=0.0.0.0'
-tmux new-session -d -s flask-session 'flask run --host=0.0.0.0'
+#tmux new-session -d -s flask-session 'flask run --host=0.0.0.0'
