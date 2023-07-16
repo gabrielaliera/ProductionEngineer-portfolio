@@ -16,3 +16,6 @@ pip install -r requirements.txt
 #No longer using, updated with adding to systemctl
 # Start Flask server in a new detached tmux session
 #tmux new-session -d -s flask-session 'flask run --host=0.0.0.0'
+
+#Restart myportfolio service
+systemctl restart myportfolio
