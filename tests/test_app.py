@@ -16,15 +16,6 @@ class AppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         html = response.get_data(as_text=True)
         self.assertIn("<title>MLH Fellow</title>", html)
-
-    def test_home_page(self):
-        """
-        Test the content and status code of `/`
-        """
-        # GET /
-        response = self.client.get("/")
-        self.assertEqual(response.status_code, 200)
-        html = response.get_data(as_text=True)
         self.assertIn("<h1>MLH Fellow</h1>", html)
         self.assertIn("<h2>Education</h2>", html)
         self.assertIn('<div class="profile">', html)
