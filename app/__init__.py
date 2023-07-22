@@ -113,13 +113,13 @@ def get_time_line_post():
 
 @app.route('/api/timeline_post', methods=["DELETE"])
 def delete_time_line_post(post_id):
-    post_id = request.args.get('post_id')
+    post_id = request.args.get('post_id') #Assumes the post_id is given in url query parameters
     try:
         post = TimelinePost.get_by_id(post_id)
         post.delete_instance()
-        return "Timeline post deleted successfully"
+        return model_to_dict(post) #Return deleted post in dic format
     except TimelinePost.DoesNotExist:
-        return "Timeline post not found", 404
+        return {"error": "Timeline post not found"}, 404
     
 @app.route('/timeline')
 def timeline():
