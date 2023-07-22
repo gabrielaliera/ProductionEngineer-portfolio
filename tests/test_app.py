@@ -101,6 +101,7 @@ class AppTestCase(unittest.TestCase):
         self.assertEqual(deleteJSON["name"], post_data["name"])
         self.assertEqual(deleteJSON["email"], post_data["email"])
         self.assertEqual(deleteJSON["content"], post_data["content"])
+
         
         #2nd GET to ensure data deleted
         second_get_respsonse = self.client.get("/api/timeline_post")
@@ -108,7 +109,7 @@ class AppTestCase(unittest.TestCase):
         self.assertTrue(second_get_respsonse.is_json)
         second_get_json = second_get_respsonse.get_json()
 
-        self.assertEquals(len(second_get_json["timeline-posts"]), len(first_get_json["timeline-posts"]))
+        self.assertLess(len(second_get_json["timeline_posts"]), len(first_get_json["timeline_posts"]))
        
 
     def test_malformed_timeline_api_post(self):
