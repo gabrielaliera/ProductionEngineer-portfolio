@@ -18,9 +18,7 @@ class TestTimelinePost(unittest.TestCase):
         test_db.close()
 
     def test_timeline_post(self):
-        """
-        Test the creation of tuples in the database
-        """
+        #Create two timeline post & check if info is correct
         first_post = TimelinePost.create(
             name="Omar Macias",
             email="omarmacias@example.com",
@@ -33,11 +31,15 @@ class TestTimelinePost(unittest.TestCase):
             content="Making tests"
         )
         self.assertEqual(second_post.id, 2)
+
         posts = TimelinePost.select()
         self.assertEqual(posts.count(), 2)
+        
         self.assertEqual(posts[0].name, "Omar Macias")
         self.assertEqual(posts[1].name, "Juan Perez")
+        
         self.assertEqual(posts[0].email, "omarmacias@example.com")
         self.assertEqual(posts[1].email, "juanperez@example.com")
+        
         self.assertEqual(posts[0].content, "Creating tests")
         self.assertEqual(posts[1].content, "Making tests")
