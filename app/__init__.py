@@ -125,8 +125,9 @@ def get_time_line_post():
     }
 
 @app.route('/api/timeline_post', methods=["DELETE"])
-def delete_time_line_post(post_id):
-    post_id = request.args.get('post_id') #Assumes the post_id is given in url query parameters
+def delete_time_line_post():
+    post_id = request.form["id"] #ID sent in request header
+    #post_id = request.args.get('post_id') #Assumes the post_id is given in url query parameters - add postID to arg of function
     try:
         post = TimelinePost.get_by_id(post_id)
         post.delete_instance()
