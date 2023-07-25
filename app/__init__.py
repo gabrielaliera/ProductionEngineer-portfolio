@@ -35,7 +35,7 @@ mydb.create_tables([TimelinePost])
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index2.html', title="MLH Fellow", url=os.getenv("URL"))
 
 workData = [
     {
@@ -69,7 +69,7 @@ def Work():
     context ={
         "workData": workData
     }
-    return render_template('Work.html', title="Work", url=os.getenv("URL"), **context)
+    return render_template('work.html', title="Work", url=os.getenv("URL"), **context)
 
 # Hobbies data
 hobbyData = [
@@ -92,11 +92,11 @@ def Hobbies():
     context = {
         "hobbyData": hobbyData
     }
-    return render_template('Hobbies.html', title="Hobbies", url=os.getenv("URL"), **context)
+    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), **context)
 
 @app.route('/Locations')  # Define the route for /Map
 def Map():
-    return render_template('Locations.html', title="Location", url=os.getenv("URL"))
+    return render_template('locations.html', title="Location", url=os.getenv("URL"))
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
