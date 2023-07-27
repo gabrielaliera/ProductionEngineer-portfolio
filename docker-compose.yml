@@ -21,6 +21,6 @@ services:
   env_file: 
    - .env
   volumes:
-    - mydatabases:/var/lib/mysql
+    - mydatabase:/var/lib/mysql
 volumes:
- mydatabases:
+ mydatabase:
