@@ -9,5 +9,7 @@ git fetch && git reset origin/main --hard
 # Spin containers down to prevent out of memory issues on our VPS instances
 docker compose -f docker-compose.prod.yml down
 
-#Build containers
-docker compose -f docker-compose.prod.yml up -d --build
+#Rebuild image incase of changes
+docker compose -f docker-compose.prod.yml up --build
+#Spin up containers
+docker compose -f docker-compose.prod.yml up -d
