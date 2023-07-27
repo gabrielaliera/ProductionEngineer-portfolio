@@ -5,24 +5,179 @@
 
 {% block content %}
     {{ super() }}
-    <div class="profile">
-        <div class="about-me">
-             <p> This is a short "About yourself" section. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                 ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus. 
-                 Faucibus a pellentesque sit amet porttitor eget dolor morbi.</p>
-        </div>   
-         <div class="profile-picture">
-             <img src="./static/img/profile-pic.jpg">
-             <h1>{{ title }}</h1>
-         </div> 
-     </div>
-     <div id="education" class="education">
-         <h2>Education</h2>
-         <div class="eduContainer">
-             <h3>University of Awesome</h3>
-             <p>B.A Computer Science</p>
-         </div>
-     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 text-lg-start d-flex flex-column justify-content-center"> 
+                <p class="h1 display-3">Welcome to my website!</p>
+                <p class="lead" id="welcome-description">I'm Gaby and this is my portfolio project my Production Engineering Internship through Major League Hacking, sponsored by Meta.</p>
+                <p class="lead" id="welcome-description">Throughout this internship, I had the fantastic opportunity to utilize a diverse range of technologies to create and deploy this impressive portfolio.</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="py-5 mx-5">
+                    <img class="rounded img-fluid shadow mx-auto d-block" id="me" src="{{ url_for('static', filename='img/profile-crop.jpg') }}" alt="Me">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p class="blockquote my-2 mx-3">Rather than crafting a conventional portfolio solely about myself, I decided to take a unique approach. This project serves as a powerful showcase of the diverse technologies I harnessed during my internship,
+                allowing you to witness the practical application of my expertise and the growth of my capabilities.</p>
+        </div>
+        <div class="row">
+            <div class="h2 display-4 text-center my-4 mb-3"><i class="fas fa-briefcase"></i> Technologies</div>
+        </div>
+    </div>
+    
+    </section>
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Python</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                            <li>write about testing in unittest</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Flask</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Jinja</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Bootstrap</h4>
+                        <ul class="card-text mt-3">
+                            <<li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Git/GitHub</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Digital Ocean</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Linux</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                            <li>services and sysmtelctl</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Bash</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">MySQL</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">Docker</h4>
+                        <ul class="card-text mt-3">
+                            <li>docker and docker compose</li>
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">YAML</h4>
+                        <ul class="card-text mt-3">
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card rounded-3" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
+                        <h4 class="card-title mt-3 text-center">NGINX</h4>
+                        <ul class="card-text mt-3">
+                            <li>reserve proxy - ssl certificate</li>
+                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <i class="fab fa-html5 m-3" title="HTML"></i>
+    <i class="fab fa-git-alt m-3" title="Git"></i>
+    <i class="fab fa-github m-3" title="GitHub"></i>
+    <i class="fab fa-linux m-3" title="Windows Subsystem for Linux"></i>
+    <!--<i class="fab fa-bootstrap m-3" title="Bootstrap"></i>
+    <i class="fas fa-pepper-hot fa-flip-horizontal m-3" title="Flask"></i>-->
+    
 {% endblock content %}
 
 {% block footer %}
