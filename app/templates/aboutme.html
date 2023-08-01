@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  <section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="py-5 mx-5">
+                <img class="rounded img-fluid shadow mx-auto d-block" id="me" src="{{ url_for('static', filename='img/profile-crop.jpg') }}" alt="Me">
+            </div>
+        </div>
+        <div class="row">
+            <p class="h3 display-3 text-center my-2 mx-3">Software Developer</p>
+        </div>
+        
+    </div>
+</section>
+    <div class="container py-2">
+        <div class="row">
+            <div class="h2 display-2 text-center my-4 mb-3" id="technologies-title"><i class="fas fa-briefcase"></i> Skills</div>
+        </div>
+        <div class="row">
+            <div class="h2 display-2 text-center my-4 mb-3" id="technologies-title"><i class="fas fa-briefcase"></i> Experience</div>
+        </div>
+
+        {% for job in workData %}
+        <div class="row">
+                <div class="card rounded-3 w-100 mb-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h4 class="card-title mt-3 text-right">{{ job.title}} </h4>
+                            </div>
+                            <div class="col-md-2 justify-content-left">
+                                <div class="card-title mt-3 text-left">{{ job.date}}</div>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-right">{{job.employer}}</div>
+                        <ul class="card-text mt-3">
+                            <li>{{ job.description }}</li>
+                        </ul>
+                    </div>
+                </div>
+            
+            
+        </div>
+        {% endfor %}
+        <div class="row">
+            <div class="h2 display-2 text-center my-4 mb-3" id="technologies-title"><i class="fas fa-briefcase"></i> Education</div>
+        </div>
+    </div>
+{% endblock %}
+ 
+{% block footer %}
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+{% endblock %}
