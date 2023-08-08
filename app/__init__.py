@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from peewee import *
 import datetime 
 from playhouse.shortcuts import model_to_dict 
-from app.data import workData, hobbyData
+from app.data import workData, eduData, hobbyData
 
 load_dotenv()
 app = Flask(__name__)
@@ -42,29 +42,10 @@ def index():
 @app.route('/aboutme')
 def aboutMe():
     context ={
-        "workData": workData
+        "workData": workData,
+        "eduData": eduData
     }
     return render_template('aboutme.html', title="Gabriela Liera", url=os.getenv("URL"), **context)
-
-@app.route('/Work')  # Define the route for /Work
-def Work():
-    context ={
-        "workData": workData
-    }
-    return render_template('work.html', title="Work", url=os.getenv("URL"), **context)
-
-
-
-@app.route('/Hobbies')  # Define the route for /Hobbies
-def Hobbies():
-    context = {
-        "hobbyData": hobbyData
-    }
-    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), **context)
-
-@app.route('/Locations')  # Define the route for /Map
-def Map():
-    return render_template('locations.html', title="Location", url=os.getenv("URL"))
 
 #--------------------------------------------------------------
 @app.route('/api/timeline_post', methods=['POST'])
