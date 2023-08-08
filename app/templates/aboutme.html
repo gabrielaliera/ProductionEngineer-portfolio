@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  <section id="banner">
+    
+    <div class="container-md my-5">
+        <div class="row">
+                <p class="h3 display-3 text-center my-2 mx-3">Gabriela Liera</p>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <p class="display-6 mx-3" data-aos="zoom-in-up">
+                    I’m a Software Engineer driven by a passion for developing forward-thinking technology that positively impacts people’s lives. Constantly pushing my boundaries, I have a strong desire for learning and growth.
+                </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row my-2">
+            <div class="h2 display-4 text-center my-4 mb-3" data-aos="zoom-in-up" data-aos-delay="100" id="aboutme-title"><i class="fas fa-briefcase"></i> My Education</div>
+        </div>
+        <div class="row justify-content-center my-7" data-aos="zoom-in-up" data-aos-delay="100">
+            {% for item in eduData %}
+            <div class="card mb-3 mx-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{{ item.img }}" class="img-fluid rounded-start" alt="{{item.location}} logo">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ item.degree }}</h5>
+                      <p class="card-subtitle">{{ item.year }}</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row my-7">
+            <div class="h2 display-4 text-center my-4 mb-3" data-aos="zoom-in-up" data-aos-delay="200" id="aboutme-title2"><i class="fas fa-briefcase"></i> My Skills</div>
+            <div class="hstack justify-content-center my-3" data-aos="zoom-in-up" data-aos-delay="200">
+                <i class="fa-brands fa-java fa-2xl m-3" title="Java"></i>
+                <i class="fa-brands fa-python fa-2xl m-3" title="Python"></i>
+                <i class="fa-brands fa-js fa-2xl m-3" title="JavaScript"></i>
+                <i class="fa-brands fa-html5 fa-2xl m-3" title="HTML"></i>
+                <i class="fa-brands fa-git-alt fa-2xl m-3" title="Git"></i>
+                <i class="fa-brands fa-github fa-2xl m-3" title="GitHub"></i>
+                <i class="fa-brands fa-linux fa-2xl m-3" title="Windows Subsystem for Linux"></i>
+                <i class="fa-brands fa-react fa-2xl m-3" title="React"></i>
+
+            </div>
+        </div>
+        <div class="row my-7">
+            <div class="h2 display-4 text-center my-4 mb-3" id="aboutme-title3" data-aos="zoom-in-up" data-aos-delay="300"><i class="fas fa-briefcase"></i> My Experience</div>
+        </div>
+
+        {% for job in workData %}
+        <div class="row">
+                <div class="card rounded-3 w-100 mb-3" id="cardCustom" data-aos="flip-right" data-aos-delay="350">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h4 class="card-title mt-3 text-left">{{ job.title}} </h4>
+                            </div>
+                            <div class="col-md-2 justify-content-end">
+                                <div class="card-title mt-3 text-right">{{ job.date}}</div>
+                            </div>
+                        </div>
+                        <div class="card-subtitle text-right">{{job.employer}}</div>
+                        <ul class="card-text mt-3">
+                            {% for item in job.description %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        {% endfor %}
+        
+        
+    </div>
+</section>
+{% endblock %}
+ 
+{% block footer %}
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+{% endblock %}
