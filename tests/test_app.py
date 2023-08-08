@@ -12,11 +12,9 @@ class AppTestCase(unittest.TestCase):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
         html = response.get_data(as_text=True)
-        self.assertIn("<title>MLH Fellow</title>", html)
-        self.assertIn("<h1>MLH Fellow</h1>", html)
-        self.assertIn("<h2>Education</h2>", html)
-        self.assertIn('<div class="profile">', html)
-        self.assertIn('<div class="about-me">', html)
+        self.assertIn("<title>Gabriela Liera</title>", html)
+        self.assertIn("Welcome to my website", html)
+        self.assertIn("Technologies", html)
     
     def test_timeline_page(self):
         # GET /timeline -content & status code
