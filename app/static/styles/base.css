@@ -1,6 +1,7 @@
 body {
    /* background: url('/static/img/stars.svg'); */
-    background-color: #659DBD;
+    background-color: #FBEEC1;
+    background-image: linear-gradient(to right, #659DBD ,#1e6690 );
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -10,6 +11,9 @@ h1 {
     font-size: 2.5em;
     font-weight: bold;
 }
+#banner {
+    background-image: linear-gradient(to right, #659DBD ,#1e6690 );
+}
 
 #welcome-title {
     font-size: 50px;
@@ -17,7 +21,125 @@ h1 {
 }
 
 #welcome-description {
-    color:#1d539f;
+    color: #0a3148;
     font-size: 30px;
     font-weight: 300;
+}
+/*
+dark brown #BC986A
+green #8D8741
+cream: #FBEEC1
+blue: #659DBD
+orange #d07e25
+light yellow: #ffcd69
+
+*/
+.navbar {
+    background-image: linear-gradient(to right, #659DBD ,#1e6690 );
+}
+
+.navbar-brand {
+    color: #FDFDB4;
+}
+
+.navbar-toggler {
+    color: #FDFDB4;
+}
+
+.nav-link {
+    color: white;
+}
+.navbar-nav li a:hover {
+    color: #f8b92a;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    font-weight: 900;
+}
+
+
+#navbarRight {
+    align-items: center;
+    justify-content: right;
+}
+
+
+#technologies-title {
+    color: #0a3148;
+}
+#aboutme-title {
+    color: #55552a;
+}
+#aboutme-title2 {
+    color: #0a3148;
+}
+#aboutme-title3 {
+    color: #4b443c;
+}
+
+
+
+#cardCustom {
+    background-color: #ccb18d;
+}
+#cardCustom2 {
+    background-color:#659DBD;
+}
+
+#cardCustom3 {
+    background-color:#f6f1e4;
+}
+
+#cardCustom4 {
+    background-color:#8D8741;
+}
+
+.divider-custom {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    background-color: #2c3e50;
+    border-radius: 1rem;
+    border-color: #2c3e50;
+  }
+  .divider-custom .divider-custom-line:first-child {
+    margin-right: 1rem;
+  }
+  .divider-custom .divider-custom-line:last-child {
+    margin-left: 1rem;
+  }
+  .divider-custom .divider-custom-icon {
+    color: #2c3e50;
+    font-size: 2rem;
+  }
+  .divider-custom.divider-light .divider-custom-line {
+    background-color: #fff;
+  }
+  .divider-custom.divider-light .divider-custom-icon {
+    color: #fff;
+  }
+
+  .profile-picture img {
+    border-radius: 50%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;        
+    padding: 20px;
+}
+
+#footerID {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
