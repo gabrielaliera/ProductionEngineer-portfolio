@@ -31,5 +31,5 @@ jobs:
            run: ssh my-vps '~/redeploy-site.sh'
          - name: Check Container Status
            run: |
-            cd ProductionEngineer-portfolio
+            cd ${{ secrets.PROJECT_ROOT }}
             docker compose ps
