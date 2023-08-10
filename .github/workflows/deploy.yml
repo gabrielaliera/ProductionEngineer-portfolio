@@ -1,19 +1,42 @@
-name: Deploy
+name: Deploy with testing
 
 on:
    push:
       branches: 
         - main
    workflow_dispatch:
-   workflow_run:
-    workflows: [Run Tests]
-    types:
-      - completed
 
 jobs:
+   test:
+     runs-on: ubuntu-latest
+     name: Run Tests
+     env:
+      TESTING: true
+     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Setup Python Virtual Environment
+        run: python -m venv python3-virtualenv
+
+      - name: Install Dependencies
+        run: python3-virtualenv/bin/pip install -r requirements.txt
+
+      - name: Add Execution Permission to Script
+        run: chmod +x run_test.sh
+        
+      - name: Run Tests
+        run: ./run_test.sh
+   
    deploy:
       name: "Deploy to VPS"
       runs-on: ubuntu-latest
+      needs: test
       steps: 
          - name: Configure SSH
            run: |
