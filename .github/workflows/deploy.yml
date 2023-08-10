@@ -55,13 +55,13 @@ jobs:
              SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
              SSH_IP: ${{ secrets.SSH_IP }}
          - name: Deploy site
-           run: ssh my-vps '~/redeplo1y-site.sh'
+           run: ssh my-vps '~/redeploy-site.sh'
          - name: Check Container Status
            run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && docker compose ps'
          - name: Send Discord Notification
            run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
   
-   notify: 
+   Notify-Failure: 
        runs-on: ubuntu-lastest
        needs: [deploy]
        if: ${{ always() && needs.deploy.result == 'failure' }}
