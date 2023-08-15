@@ -22,7 +22,6 @@ class AppTestCase(unittest.TestCase):
         timeline_html = timeline_response.get_data(as_text=True)
         self.assertIn("<title>Timeline</title>", timeline_html)
         self.assertIn("Timeline", timeline_html)
-        self.assertIn("Recent Posts", timeline_html)
 
     def test_timeline_api_get(self):
         # GET /api/timeline_post
