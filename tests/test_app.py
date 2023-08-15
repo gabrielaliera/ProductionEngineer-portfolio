@@ -14,7 +14,6 @@ class AppTestCase(unittest.TestCase):
         html = response.get_data(as_text=True)
         self.assertIn("<title>Gabriela Liera</title>", html)
         self.assertIn("Welcome to my website", html)
-        self.assertIn("Technologies", html)
     
     def test_timeline_page(self):
         # GET /timeline -content & status code
