@@ -9,24 +9,24 @@
     
     <div class="container-md my-5">
         <div class="row">
-                <p class="h3 display-3 text-center my-2 mx-3">Gabriela (Gaby) Liera</p>
+                <p class="h3 display-4 text-center my-2 mx-3">Gabriela (Gaby) Liera</p>
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <p class="display-6 mx-3" data-aos="zoom-in-up">
+                <p class="display-6 mx-3">
                     I’m a Software Engineer driven by a passion for developing forward-thinking technology that positively impacts people’s lives. Constantly pushing my boundaries, I have a strong desire for learning and growth.
                 </p>
         </div>
     </div>
     <div class="container">
         <div class="row my-2">
-            <div class="h2 display-4 text-center my-4 mb-3" data-aos="zoom-in-up" data-aos-delay="100" id="aboutme-title"><i class="fas fa-briefcase"></i> My Education</div>
+            <div class="h2 display-4 text-center my-4 mb-3" id="aboutme-title"><i class="fa-solid fa-graduation-cap"></i></i> My Education</div>
         </div>
-        <div class="row justify-content-center my-7" data-aos="zoom-in-up" data-aos-delay="100">
+        <div class="row justify-content-center my-7">
             {% for item in eduData %}
-            <div class="card mb-3 mx-3" style="max-width: 540px;">
+            <div class="card mb-3 mx-3" style="max-width: 450px;">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img src="{{ item.img }}" class="img-fluid rounded-start" alt="{{item.location}} logo">
@@ -42,7 +42,7 @@
             {% endfor %}
         </div>
         <div class="row my-7">
-            <div class="h2 display-4 text-center my-4 mb-3" data-aos="zoom-in-up" data-aos-delay="200" id="aboutme-title2"><i class="fas fa-briefcase"></i> My Skills</div>
+            <div class="h2 display-4 text-center my-4 mb-3" data-aos="zoom-in-up" data-aos-delay="200" id="aboutme-title2"><i class="fa-solid fa-code"></i> My Skills</div>
             <div class="hstack justify-content-center my-3" data-aos="zoom-in-up" data-aos-delay="200">
                 <i class="fa-brands fa-java fa-2xl m-3" title="Java"></i>
                 <i class="fa-brands fa-python fa-2xl m-3" title="Python"></i>
@@ -61,17 +61,14 @@
 
         {% for job in workData %}
         <div class="row">
-                <div class="card rounded-3 w-100 mb-3" id="cardCustom" data-aos="flip-right" data-aos-delay="350">
+                <div class="card rounded-3 w-85 mb-3 justify-content-center" id="cardCustom" data-aos="flip-right" data-aos-delay="350">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-10">
-                                <h4 class="card-title mt-3 text-left">{{ job.title}} </h4>
-                            </div>
-                            <div class="col-md-2 justify-content-end">
-                                <div class="card-title mt-3 text-right">{{ job.date}}</div>
+                                <h4 class="card-title mt-3 text-left"><strong>{{ job.title}}</strong> at {{job.employer}}</h4>
                             </div>
                         </div>
-                        <div class="card-subtitle text-right">{{job.employer}}</div>
+                        <div class="card-subtitle text-right"><i class="fa-solid fa-location-dot"></i>  {{job.location}}  <i class="fa-solid fa-clock"></i>  {{job.date}}</div>
                         <ul class="card-text mt-3">
                             {% for item in job.description %}
                             <li>{{ item }}</li>
