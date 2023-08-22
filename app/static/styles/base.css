@@ -7,17 +7,18 @@ body {
 }
 
 h1 {
-    color: #FBEEC1;
+    color: #eeeeeec8;
     font-size: 2.5em;
     font-weight: bold;
 }
+
+
 #banner {
     background-image: linear-gradient(to right, #659DBD ,#1e6690 );
 }
 
 #welcome-title {
-    font-size: 50px;
-    font-weight: 700;
+    color: #eeeeeec8;
 }
 
 #welcome-description {
@@ -67,37 +68,25 @@ light yellow: #ffcd69
     justify-content: right;
 }
 
+/*------ About me page --*/
 
 #technologies-title {
     color: #0a3148;
 }
+
 #aboutme-title {
-    color: #55552a;
-}
-#aboutme-title2 {
     color: #0a3148;
 }
-#aboutme-title3 {
-    color: #4b443c;
-}
 
 
-
+/*------ Tech card --*/
 #cardCustom {
-    background-color: #ccb18d;
-}
-#cardCustom2 {
-    background-color:#659DBD;
+    background-color: #eeeeeec8;
+    box-shadow: 0 15px 25px rgba(9, 9, 9, 0.154);
 }
 
-#cardCustom3 {
-    background-color:#f6f1e4;
-}
 
-#cardCustom4 {
-    background-color:#8D8741;
-}
-
+/*------ --*/
 .divider-custom {
     margin: 1.25rem 0 1.5rem;
     width: 100%;
@@ -139,9 +128,10 @@ light yellow: #ffcd69
     padding: 20px;
 }
 
-#footerID {
-    margin-top: 50px;
-    margin-bottom: 20px;
+/*------Blog page --*/
+
+#timelineTitle {
+    color: #0a3148;
 }
 
 #postContainer {
@@ -150,12 +140,18 @@ light yellow: #ffcd69
     backdrop-filter: blur(10px);
     margin: 20px 200px 20px 200px;
     padding: 20px;
+    background-color: #eeeeeec8;
 }
 
 #postContent {
-    background-color: #649cbc;
-    box-shadow: 0 15px 25px rgba(9, 9, 9, 0.154);
+    background-color: #fbfbfb;
     padding: 10px;
     border-radius: 14px;
     backdrop-filter: blur(10px);
+}
+
+/*------ footer --*/
+#footerID {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
