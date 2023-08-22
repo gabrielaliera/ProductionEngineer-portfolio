@@ -5,11 +5,12 @@
 
 {% block content %}
     {{ super() }}
-    <section id="banner">
-        <div class="container">
+    <!-------------- Welcome ---------------->
+    <header>
+        <div class="container-xl">
             <div class="row">
-                <div class="col-lg-8 text-lg-start d-flex flex-column justify-content-center"> 
-                    <p class="h1 display-3 mt-1">Welcome to my website!</p>
+                <div class="col-lg-8 text-lg-start d-flex flex-column  justify-content-center "> 
+                    <p class="h1 display-3 mt-1" id="welcome-title">Welcome to my website!</p>
                     <p class="lead mt-4" id="welcome-description" data-aos="fade-right" data-aos-delay="200">I'm Gaby Liera and this website was created during my Production Engineering Internship through Major League Hacking, sponsored by Meta.</p>
                     <p class="lead" id="welcome-description" data-aos="fade-right" data-aos-delay="400">This project serves as a showcase of the diverse technologies I harnessed during my internship,
                         allowing you to witness the practical application of my expertise and the growth of my capabilities.</p>
@@ -21,94 +22,57 @@
                 </div>
             </div>            
         </div>
-    </section>
-    
+    </header>
+    <!-------------- Technoligies ---------------->
     </section>
     <div class="container py-2">
         <div class="row">
-            <div class="h2 display-2 text-center my-4 mb-3" id="technologies-title" data-aos="fade-right" data-aos-delay="200"><i class="fas fa-briefcase"></i>Powered by</div>
+            <div class="h2 display-2 text-center my-4 mb-3" id="technologies-title" data-aos="fade-right" data-aos-delay="200"><i class="fas fa-briefcase"></i> Powered by</div>
         </div>
         <div class="row">
+             <!---python---->
             <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
-                    
-                    <img src="/static/img/tech/python.png" class="img-fluid rounded-start m-3" alt="Python Logo">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/python.png" class="img-fluid rounded m-2" alt="Python Logo">
                     <div class="card-body">
-                        <ul class="card-text mt-3">
-                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                            <li>write about testing in unittest</li>
+                        <ul class="card-text">
+                            <li>Used Python for API funationality, database connection, and unit test</li>
+                            <li>Implemented test-driven development(TDD) for unit testing & integration testing on API endpoints & MySQL</li>
+                        </ul>
+                    </div>
+                
+                </div>
+            </div>
+            <!---flask---->
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/flask.avif" class="img-fluid rounded m-3" alt="Flask Logo">
+                    <div class="card-body">
+                        <ul class="card-text">
+                            <li>Used to create RESTful API for timeline post</li>
+                            <li>Used to create different web page routes</li>
+                        </ul>
+                    </div>
+                  
+                </div>
+            </div>
+             <!---jinja---->
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/jinja.png" class="img-fluid rounded m-3" alt="Jinja Logo">
+                    <div class="card-body mt-4">
+                        <ul class="card-text">
+                            <li>Template rendering used to generate HTML pages dynamically by embedding placeholders for dynamic content like navigation bar, footer, and scripts</li>
                         </ul>
                     </div>
                 </div>
             </div>
+             <!---bootstrap---->
             <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom3" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/flask.avif" class="img-fluid rounded-start m-3" alt="Flask Logo">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/bootstrap2.png" class="img-fluid rounded mt-3 mx-3" alt="Bootstrap Logo">
                     <div class="card-body">
-                        <ul class="card-text mt-3">
-                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom3" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/jinja.png" class="img-fluid rounded-start m-3" alt="Jinja Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
-                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom4" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/bootstrap2.png" class="img-fluid rounded-start m-3" alt="Bootstrap Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
-                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/git.png" class="img-fluid rounded-start m-3" alt="Git and Github Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
-                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom3" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/digitalOcean.png" class="img-fluid rounded-start m-3" alt="Digital Ocean Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
-                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom3" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/linux.png" class="img-fluid rounded-start m-1" alt="Linux Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
-                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                            <li>services and sysmtelctl</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom4" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/bash.png" class="img-fluid rounded-start m-1" alt="Bash Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
+                        <ul class="card-text">
                             <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
                         </ul>
                     </div>
@@ -116,44 +80,95 @@
             </div>
         </div>
         <div class="row">
+             <!---Git---->
             <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/mysql.jpg" class="img-fluid rounded-start m-3" alt="MySQL Logo">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/git.png" class="img-fluid rounded mt-5 mx-3" alt="Git and Github Logo">
                     <div class="card-body">
                         <ul class="card-text mt-3">
+                            <li>Created custom GitHub Actions yaml files to run tests during pull request and to rebuild and deploy Docker containers to virutal private server</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <!---digital ocean---->
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/digitalOcean.png" class="img-fluid rounded mt-5 mx-3" alt="Digital Ocean Logo">
+                    <div class="card-body">
+                        <ul class="card-text mt-4">
+                            <li>Using a Digital Ocean droplet (virtual private server) on a CentOS operating system to host project</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <!---Linux---->
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/linux.png" class="img-fluid rounded mt-1 mx-2" alt="Linux Logo">
+                    <div class="card-body">
+                        <ul class="card-text">
+                            <li>Using CentOS 7 operating system for project</li>
+                            <li>Created customer services and used systemctl to enable programs like mysql and portfolio script</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <!---bash---->
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/bash.png" class="img-fluid rounded" alt="Bash Logo">
+                    <div class="card-body">
+                        <ul class="card-text">
+                            <li>Wrote redeploy-site.sh and run-test.sh scripts</li>
+                            <li>Scripting using commands like curl, grep, awk, jq, sort, wc</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+             <!---mysql---->
+            <div class="col-lg-3 px-3 my-4">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/mysql.jpg" class="img-fluid rounded m-3" alt="MySQL Logo">
+                    <div class="card-body">
+                        <ul class="card-text">
                             <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
                         </ul>
                     </div>
                 </div>
             </div>
+             <!---nginx---->
             <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom3" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/nginx.png" class="img-fluid rounded-start m-3" alt="NGINX Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/nginx.png" class="img-fluid rounded mt-4 mx-3" alt="NGINX Logo">
+                    <div class="card-body mt-4">
+                        <ul class="card-text">
                             <li>reserve proxy - ssl certificate</li>
                             <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
                         </ul>
                     </div>
                 </div>
             </div>
+             <!---docker---->
             <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom3" data-aos="flip-right" data-aos-delay="150">
-                    <img src="/static/img/tech/docker.png" class="img-fluid rounded-start m-3" alt="Docker Logo">
-                    <div class="card-body">
-                        <ul class="card-text mt-3">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <img src="/static/img/tech/docker.png" class="img-fluid rounded mt-4 mx-3" alt="Docker Logo">
+                    <div class="card-body mt-5">
+                        <ul class="card-text">
                             <li>docker and docker compose</li>
                             <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
                         </ul>
                     </div>
                 </div>
             </div>
+             <!---yaml---->
             <div class="col-lg-3 px-3 my-4">
-                <div class="card rounded-3" id="cardCustom4" data-aos="flip-right" data-aos-delay="150">
-                    <div class="card-body">
-                        <i class="fab fa-python m-3 fa-4x text-center" title="Python"></i>
-                        <h4 class="card-title mt-3 text-center">YAML</h4>
-                        <ul class="card-text mt-3">
+                <div class="card w-100 h-100 rounded-3" id="cardCustom" data-aos="flip-right" data-aos-delay="150">
+                    <div class="mt-5 mb-2 mx-3 justify-content-center"><center><i class="fa-solid fa-code fa-2xl m-3" title="Python"> YAML</i><center></center></div>
+                    <div class="card-body mt-5">
+                        <ul class="card-text">
                             <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
                         </ul>
                     </div>
@@ -161,9 +176,6 @@
             </div>
         </div>
     </div>
-    
-    <!--<i class="fab fa-bootstrap m-3" title="Bootstrap"></i>
-    <i class="fas fa-pepper-hot fa-flip-horizontal m-3" title="Flask"></i>-->
     
 {% endblock content %}
 
