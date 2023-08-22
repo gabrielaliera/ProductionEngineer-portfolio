@@ -5,7 +5,7 @@
 
 {% block content %}
   {{ super() }}
-    <div class="h1 mx-3 my-3">Timeline</div>
+    <div class="h1 mx-3 my-3" id="timelineTitle">Timeline</div>
     <form id="postForm" action="/api/timeline_post" method="POST">
       <div class="row mx-3 my-3">
         <div class="col-md-6 mt-3">
@@ -30,7 +30,7 @@
       </div>     
     </form>
 
-    <div class="h2 mx-3 mt-5">Recent Posts</div>
+    <div class="h2 mx-3 mt-5" id="timelineTitle">Recent Posts</div>
     <div class="mx-3 my-3" id="timelinePosts">
         <!-- Timeline posts will be displayed here -->
     </div>
