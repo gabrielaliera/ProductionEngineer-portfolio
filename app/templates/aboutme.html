@@ -5,25 +5,33 @@
 
 {% block content %}
   {{ super() }}
-  <section id="banner">
+  <section class="my-7" id="banner">
     
     <div class="container-md my-5">
-        <div class="row">
-                <p class="h3 display-4 text-center my-2 mx-3" id="aboutme-title">Gabriela (Gaby) Liera</p>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <p class="display-6 mx-3">
-                    I’m a Software Engineer driven by a passion for developing forward-thinking technology that positively impacts people’s lives. Constantly pushing my boundaries, I have a strong desire for learning and growth.
-                </p>
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <p class="h1 display-4 mt-6 mb-3" id="aboutme-title">About Me</p>
         </div>
+      </div>
+      <div class="row">
+        
+          <p class="h2">
+            Hello! I'm Gaby and I’m a Software Engineer driven by a passion for developing forward-thinking technology that positively impacts people’s lives. Constantly pushing my boundaries, I have a strong desire for learning and growth.
+          </p>
+       
+      </div>
+      
     </div>
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-line"></div>
+  </div>
+    
       <!---Education---->
     <div class="container">
         <div class="row my-2">
-            <div class="h2 display-4 text-center my-4 mb-3" id="aboutme-title"><i class="fa-solid fa-graduation-cap"></i></i> My Education</div>
+            <div class="h2 display-4 text-start my-4 mb-3" id="aboutme-title"><i class="fa-solid fa-graduation-cap"></i></i> My Education</div>
         </div>
         <div class="row justify-content-center my-7">
             {% for item in eduData %}
@@ -44,7 +52,7 @@
         </div>
           <!---Skills---->
         <div class="row my-7">
-            <div class="h2 display-4 text-center my-4 mb-3" id="aboutme-title"><i class="fa-solid fa-code"></i> My Skills</div>
+            <div class="h2 display-4 text-start my-4 mb-3" id="aboutme-title"><i class="fa-solid fa-code"></i> My Skills</div>
             <div class="hstack justify-content-center my-3">
                 <i class="fa-brands fa-java fa-2xl m-3" title="Java"></i>
                 <i class="fa-brands fa-python fa-2xl m-3" title="Python"></i>
@@ -59,7 +67,7 @@
         </div>
           <!---Experience---->
         <div class="row my-7">
-            <div class="h2 display-4 text-center my-4 mb-3" id="aboutme-title"><i class="fas fa-briefcase"></i> My Experience</div>
+            <div class="h2 display-4 text-start my-4 mb-3" id="aboutme-title"><i class="fas fa-briefcase"></i> My Experience</div>
         </div>
 
         {% for job in workData %}
