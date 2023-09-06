@@ -12,13 +12,16 @@ This project serves as a showcase of the diverse technologies I harnessed during
 - Containerizing the infrastructure using Docker and Docker Compose, comprising three containers: myportfolio, mysql, and nginx
 - Automated unit testing and integration testing on API endpoints and the MySQL database during push or pull requests to the main branch
 
-## Demo
-[Visit the Live Page](https://gabrielaliera.duckdns.org/)
+## Visit the Live Page at https://gabrielaliera.duckdns.org/
 
-Here's a walkthrough of webiste:
+### Week 12 Portfolio
+<img src='https://github.com/gabrielaliera/ProductionEngineer-portfolio/blob/main/README-img/week12.PNG' title='Week 12 Portfolio' width='1200' heigth="700" alt='Week 12 Portfolio' />
 
-<img src='' title='Video Demo' width='1200' heigth="1200" alt='Video Demo' />
-GIF created with <a href="https://www.cockos.com/licecap/">LICEcap.</a> 
+### Week 6 Portfolio
+<img src='https://github.com/gabrielaliera/ProductionEngineer-portfolio/blob/main/README-img/week6-portfolio.PNG' title='Week 6 Portfolio' width='1200' heigth="700" alt='Week 6 Portfolio' />
+
+### Week 1 Portfolio
+<img src='https://github.com/gabrielaliera/ProductionEngineer-portfolio/blob/main/README-img/start-portfolio.PNG' title='Week 1 Portfolio' width='1200' heigth="700" alt='Week 1 Portfolio' />
 
 
 ## Installation
