@@ -11,10 +11,14 @@ function fetchTimelinePosts() {
       timelinePosts.forEach(post => {
         const postElement = document.createElement('div');
         postElement.innerHTML = `
-          <h3>${post.name}</h3>
-          <p>${post.content}</p>
-          <p><em>${post.created_at}</em></p>
-          <hr>
+          <div class="card my-3 mx-3" id="postContainer">
+            <div class="card-body width=100">
+              <h3 class="card-title">${post.name}</h3>
+              <div class="card-subtitle mb-2">${post.email}</div>
+              <div class="card-text" id="postContent">${post.content}</div>
+              <p class="card-text mt-2">Posted ${post.created_at}</p>
+            </div>
+          </div>
         `;
         timelinePostsContainer.appendChild(postElement);
       });
@@ -43,7 +47,7 @@ fetch('/api/timeline_post', {
 
 // Fetch timeline posts when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-fetchTimelinePosts();
+  fetchTimelinePosts();
 });
 
 // Add event listener to the form for form submission
