@@ -1,7 +1,6 @@
 body {
    /* background: url('/static/img/stars.svg'); */
-    background-color: #FBEEC1;
-    background-image: linear-gradient(to right, #659DBD ,#1e6690 );
+    background-color:#659DBD ;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -14,7 +13,8 @@ h1 {
 
 
 #banner {
-    background-image: linear-gradient(to right, #659DBD ,#1e6690 );
+   /* background-image: linear-gradient(to right, #659DBD ,#1e6690 );*/
+    background-color:#659DBD ;
 }
 
 #welcome-title {
@@ -36,7 +36,8 @@ light yellow: #ffcd69
 
 */
 .navbar {
-    background-image: linear-gradient(to right, #659DBD ,#1e6690 );
+   /* background-image: linear-gradient(to right, #659DBD ,#1e6690 );*/
+    background-color:#659DBD ;
 }
 
 .navbar-brand {
