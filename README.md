@@ -61,4 +61,4 @@ You should get a response like this in the terminal:
 You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
 
 ## Notes
-I’m incredibly grateful for the Major League Hacking Fellowship, which not only offered hands-on technical experience but also enabled collaboration with exceptional individuals in the tech industry. I’m excited to apply everything I’ve learned and continue contributing to the ever-evolving world of technology!
+I’m incredibly grateful for the Major League Hacking Fellowship and Meta , which not only offered hands-on technical experience but also enabled collaboration with exceptional individuals in the tech industry. I’m excited to apply everything I’ve learned and continue contributing to the ever-evolving world of technology!
